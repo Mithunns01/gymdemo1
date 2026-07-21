@@ -4,9 +4,11 @@ services:
     name: gymdemo
     env: java
     plan: free
-    buildCommand: ./mvnw clean package -DskipTests
+    buildCommand: mvn clean package -DskipTests
     startCommand: java -Dspring.profiles.active=prod -jar target/gymdemo-0.0.1-SNAPSHOT.jar
     envVars:
       - key: PORT
         value: 10000
+      - key: JAVA_HOME
+        value: /usr/lib/jvm/java-17-openjdk-amd64
 
