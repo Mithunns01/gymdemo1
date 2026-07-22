@@ -1474,10 +1474,6 @@ function showRenewModal() {
 
 // ========== Initialize ==========
 document.addEventListener('DOMContentLoaded', () => {
-    const user = getUser();
-    if (user && user.token) {
-        setToken(user.token);
-    }
     if (getToken()) {
         initApp();
     } else {
